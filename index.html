@@ -180,10 +180,11 @@ section{padding:64px 0}
 .v-head h3{font-size:clamp(28px,7vw,40px);font-family:var(--serif)}
 .v-head p{color:var(--ink2);margin:10px 0 0;max-width:60ch}
 .v-head .menu-tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
-.seg{display:inline-flex;background:var(--ink);border-radius:99px;padding:4px;gap:2px}
-.seg button{border:0;background:transparent;color:#cdbcc4;border-radius:99px;padding:10px 18px;font-size:15px;font-weight:600;display:flex;gap:8px;align-items:center}
+.seg{display:inline-flex;background:var(--red);border-radius:99px;padding:4px;gap:2px;box-shadow:0 8px 22px -8px rgba(224,53,43,.65);animation:segpulse 2.4s ease-out 3}
+@keyframes segpulse{0%{box-shadow:0 0 0 0 rgba(224,53,43,.55),0 8px 22px -8px rgba(224,53,43,.65)}70%{box-shadow:0 0 0 14px rgba(224,53,43,0),0 8px 22px -8px rgba(224,53,43,.65)}100%{box-shadow:0 0 0 0 rgba(224,53,43,0),0 8px 22px -8px rgba(224,53,43,.65)}}
+.seg button{border:0;background:transparent;color:#fff;border-radius:99px;padding:10px 18px;font-size:15px;font-weight:600;display:flex;gap:8px;align-items:center}
 .seg button svg{width:18px;height:18px}
-.seg button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--red)}
 .stage{display:grid;gap:22px;align-items:start}
 .stage .frame-wrap{display:flex;justify-content:center;position:relative}
 .browser{width:100%;background:#fff;border-radius:var(--r-m);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
